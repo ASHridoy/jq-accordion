@@ -12,6 +12,7 @@
 #form-copy .buttn{}
 #form-copy .buttn button{
 	margin-bottom: 10px;
+	width: 100%;
 }
 .form-area{}
 .form-area input{
