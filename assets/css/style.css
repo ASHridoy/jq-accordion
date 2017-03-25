@@ -53,6 +53,12 @@
 h3{
 	font-family: 'Baloo Bhaina', cursive !important;
 }
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    cursor: pointer;
+}
 .date-content h3{
 }
 .date-content p{
