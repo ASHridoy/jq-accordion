@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="assets/css/jquery-ui.min.css">
+    <title>Date picker</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/images/jq.png">
+  </head>
+  <body>
+
+   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+</head>
+<body>
+
+<section id="form-copy">
+  <div class="container">
+    <div class="row">
+      <div class="heading">
+      <h1>Copy &amp; Paste form</h1>
+      <p>Proin iaculis purus consequat sem cure</p>
+        
+      </div>
+      <div class="col-sm-5">
+        <div class="content">
+          <p><b>Username :</b> <span id="copy-usr">Abu Saleh Hridoy</span></p>
+          <p><b>Email :</b> <span id="copy-ml">asridoy001@gmail.com</span></p>
+          <p><b>Textarea :</b> <span id="copy-ta">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining</span></p>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="buttn">
+          <button class="btn btn-primary" id="paste-username">Paste Username</button>
+          <button class="btn btn-primary" id="paste-email">Paste Email</button>
+          <button class="btn btn-primary" id="paste-textarea">Paste Textarea</button>
+        </div>
+      </div>
+      <div class="col-sm-5">
+        <div class="form-area">
+          <input class="form-control" id="paste-usr"></input>
+          <input class="form-control" id="paste-ml"></input>
+          <textarea rows="7" class="form-control" id="paste-ta"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="accordion-section">
+    <div class="heading">
+      <h1>accordion &amp; date picker</h1>
+      <p>Proin iaculis purus consequat sem cure</p>
+    </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="accordion-content text-center">
+          <div id="accordion">
+  <h3>Bangladesh vs Sri-Lanka ODI series summary</h3>
+  <div>
+    <img src="assets/images/bd-sl.jpg">
+  </div>
+  <h3>Tamim, Shakib demolish Sri Lanka</h3>
+  <div>
+    <img src="assets/images/tamim.jpg">
+  </div>
+  <h3>Five things Bangladesh got right in Dambulla</h3>
+  <div>
+    <p>
+    From being brave in selecting their XI to holding more catches, Bangladesh did several things better in Dambulla than in other ODI outings this season.
+    </p>
+    <ul class="text-left">
+      <li>Improved in-the-moment application</li>
+      <li>The safer cordon</li>
+      <li>Balance between aggression and pragmatism</li>
+      <li>Brave selection</li>
+      <li>Adaptation to the unfamiliar</li>
+    </ul>
+  </div>
+  <h3>Bangladesh marks - Many positives</h3>
+  <div>
+    <p>
+    Bangladesh carried forward the momentum from their historic 100th Test win by making a rousing start to the three-match ODI series in Dambulla. Tamim Iqbal, with his eighth hundred, and Shakib Al Hasan fashioned their formidable score of 324 for 5 before a combined effort from the bowlers and fielders shut Sri Lanka out for 234 in 45.1 overs.
+    </p>
+    <p>This was the first time Bangladesh had posted a 300-plus total away from home against a higher-ranked team, one that helped them cruise towards a win for most parts. Thisara Perera, coming in at No. 8, decided to upset them temporarily with a fifty off just 28 balls just when victory looked a foregone conclusion for the visitors. But the escalating asking rate resulted in big shots from the other batsmen, which eventually led to their downfall.</p>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="date-content">
+        <h3>Pick a date of an article</h3>
+        <p>Date: <input type="text" id="datepicker"></p>
+        <img src="assets/images/shakib.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="footer">
+  <div class="container">
+      <p>&copy; Copyright ESPNcricinfo 2017</p>
+  </div>
+</section>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+<script>
+$(function(){
+   $("#paste-username").click(function(){
+
+
+    var copy=$("#copy-usr").text();
+
+
+    $("#paste-usr").val(copy).css({"background":"#eee"})
+      
+   })
+})
+</script>
+<script>
+$(function(){
+   $("#paste-email").click(function(){
+
+
+    var copy=$("#copy-ml").text();
+
+
+    $("#paste-ml").val(copy).css({"background":"#eee"})
+      
+   })
+})
+</script>
+<script>
+$(function(){
+   $("#paste-textarea").click(function(){
+
+
+    var copy=$("#copy-ta").text();
+
+
+    $("#paste-ta").val(copy).css({"background":"#eee"})
+      
+   })
+})
+</script>
+<script>
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true
+    });
+  } );
+  </script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion();
+  } );
+  </script>
+  </body>
+</html>
