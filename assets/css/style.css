@@ -7,7 +7,10 @@
 }
 #form-copy .content{}
 #form-copy .content p{
-	margin-bottom: 10px;
+	margin-bottom: 20px;
+
+}#form-copy .content p:first-child{
+	margin-top: 10px;
 }
 #form-copy .buttn{}
 #form-copy .buttn button{
@@ -47,9 +50,20 @@
 	background: #eee;
 	padding-top: 5px;
 	margin-bottom: 0;
+}#footer p{
+	font-style: italic;
 }
 .date-content{
 	text-align: center;
+}
+#paste-all{
+	text-transform: capitalize;
+	margin-top: 15px;
+}
+#clr-all{
+
+	text-transform: capitalize;
+	margin-top: 15px;
 }
 h3{
 	font-family: 'Baloo Bhaina', cursive !important;
@@ -63,5 +77,9 @@ button, input, select, textarea {
 .date-content h3{
 }
 .date-content p{
+}
+.date-content button{
+	display: block;
+	margin: 10px auto;
 }
 
