@@ -45,6 +45,8 @@
           <input class="form-control" id="paste-usr"></input>
           <input class="form-control" id="paste-ml"></input>
           <textarea rows="7" class="form-control" id="paste-ta"></textarea>
+          <button class="btn btn-danger" id="paste-all">Click to paste all information</button>
+          <button class="btn btn-danger" id="clr-all">Click to clear all</button>
         </div>
       </div>
     </div>
@@ -96,6 +98,7 @@
         <div class="date-content">
         <h3>Pick a date of an article</h3>
         <p>Date: <input type="text" id="datepicker"></p>
+        <button class="btn btn-success">Go!</button>
         <a href="#"><img src="assets/images/shakib.jpg"></a>
         </div>
       </div>
@@ -114,7 +117,21 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script type="text/javascript" src="assets/js/jquery-ui.min.js"></script>
+
 <script>
+$(function(){
+   $("#paste-all").click(function(){
+
+
+    var copy=$("#copy-usr").text();
+    $("#paste-usr").val(copy).css({"background":"#eee"})
+    var copy=$("#copy-ml").text();
+    $("#paste-ml").val(copy).css({"background":"#eee"})
+    var copy=$("#copy-ta").text();
+    $("#paste-ta").val(copy).css({"background":"#eee"})
+   })
+})
+
 $(function(){
    $("#paste-username").click(function(){
 
@@ -126,8 +143,25 @@ $(function(){
       
    })
 })
-</script>
-<script>
+
+$(function(){
+     $("#clr-all").click(function(){
+  
+      var clear=$("").text();
+  
+      $("#paste-usr").val(clear).css({"background":"#fff"})
+      
+      var clear=$("").text();
+  
+      $("#paste-ml").val(clear).css({"background":"#fff"})
+      
+      var clear=$("").text();
+  
+      $("#paste-ta").val(clear).css({"background":"#fff"})
+        
+     })
+  })
+
 $(function(){
    $("#paste-email").click(function(){
 
@@ -139,8 +173,7 @@ $(function(){
       
    })
 })
-</script>
-<script>
+
 $(function(){
    $("#paste-textarea").click(function(){
 
@@ -152,16 +185,14 @@ $(function(){
       
    })
 })
-</script>
-<script>
+
   $( function() {
     $( "#datepicker" ).datepicker({
       changeMonth: true,
       changeYear: true
     });
   } );
-  </script>
-  <script>
+
   $( function() {
     $( "#accordion" ).accordion();
   } );
